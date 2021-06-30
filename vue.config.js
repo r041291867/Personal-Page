@@ -1,5 +1,4 @@
 module.exports = {
-  baseUrl: "personal-page",
   pages: {
     index: {
       // entry for the page
@@ -9,5 +8,8 @@ module.exports = {
   },
   transpileDependencies: [
     'vuetify'
-  ]
+  ],
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/personal-page/'
+    : '/',
 }
